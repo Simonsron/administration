@@ -1,5 +1,9 @@
-import {createStore} from 'redux'//从redux众引入createStore，用于创建最核心的store对象
+import {createStore,applyMiddleware} from 'redux'//从redux众引入createStore，用于创建最核心的store对象
 
-import reducer from './reducer'
+import {composeWithDevTools} from 'redux-devtools-extension'
 
-export default createStore(reducer)
+import reducers from './reducers'
+
+import thunk from 'redux-thunk'
+
+export default createStore(reducers,composeWithDevTools(applyMiddleware(thunk)))

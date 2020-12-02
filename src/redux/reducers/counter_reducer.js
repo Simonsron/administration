@@ -1,4 +1,4 @@
-import {INCRE,PRE} from './action_types'
+import {INCRE,PRE} from '../action_types'
 let initState = 0//设置初始化状态
 export default function operaCount(preState=initState,action){
   console.log('------reducer-------',action);
@@ -8,7 +8,6 @@ export default function operaCount(preState=initState,action){
   switch (type) {
     case INCRE:
       newState = preState + data
-      console.log(newState);
       return newState
     case PRE:
       newState = preState - data
