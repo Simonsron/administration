@@ -12,6 +12,6 @@ export default function test(preState=initState,action){
       newState = preState + data + '!'
       return newState
     default:
-      break;
+      return preState
   }
  }
