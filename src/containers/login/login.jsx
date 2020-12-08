@@ -2,9 +2,11 @@ import React,{Component} from 'react'
 import './css/login.less'
 import Logo from './imgs/logo.png'
 import { Form, Input, Button} from 'antd';
+import {connect} from 'react-redux'
+import {creacteDemo1Action,creacteDemo2Action} from '../../redux/action_creators/test_action'
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-export default class Login extends Component{
+class Login extends Component{
   pswValidator=(rule,value)=>{
     if(!value){
       return Promise.reject('请输入密码')
@@ -67,3 +69,10 @@ export default class Login extends Component{
     )
   }
 }
+export default connect(
+  state=>({demo:state.test}),
+  {
+    demo1:creacteDemo1Action,
+    demo2:creacteDemo2Action
+  }
+)(Login)
