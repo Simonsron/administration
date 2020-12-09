@@ -1,2 +1,2 @@
-export const TEST1 = 'text1'
-export const TEST2 = 'text2'
+export const TEST1 = 'test1'
+export const TEST2 = 'test2'

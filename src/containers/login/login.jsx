@@ -7,6 +7,9 @@ import {creacteDemo1Action,creacteDemo2Action} from '../../redux/action_creators
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 class Login extends Component{
+  componentDidMount(){
+    console.log(this.props);
+  }
   pswValidator=(rule,value)=>{
     if(!value){
       return Promise.reject('请输入密码')
@@ -70,7 +73,7 @@ class Login extends Component{
   }
 }
 export default connect(
-  state=>({demo:state.test}),
+  state=>({test:state.test}),
   {
     demo1:creacteDemo1Action,
     demo2:creacteDemo2Action
