@@ -46,6 +46,7 @@ body #root .app {
 }
 .login section h1 {
   font-size: 25px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .ant-row {

@@ -12,3 +12,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
+
+//跨域在package中加 "proxy":"http://localhost:4000"
