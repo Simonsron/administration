@@ -23,8 +23,9 @@ class Login extends Component{
       return Promise.resolve();
     }
   }
-  onFinish = values => {
+  onFinish = (values) => {
     console.log('Received values of form: ', values);
+
   };
   render(){
     return (
