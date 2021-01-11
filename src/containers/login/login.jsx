@@ -9,6 +9,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 class Login extends Component{
   componentDidMount(){
     console.log(this.props);
+    
   }
   pswValidator=(rule,value)=>{
     if(!value){
